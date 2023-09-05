@@ -6,7 +6,8 @@ const doc = {
     title: 'Locations API',
     description: 'Lorem'
   },
-  host: (process.env.SERVER_URL || 'localhost') + ':' + (process.env.SERVER_PORT || '3000')
+  host: (process.env.SERVER_URL || 'localhost') + ':' + (process.env.SERVER_PORT || '3000'),
+  basePath: process.env.SERVER_BASE_PATH || '/'
 }
 
 const outputFile = './swagger.json';
