@@ -1,0 +1,22 @@
+import "dotenv/config";
+import swaggerAutogen from 'swagger-autogen';
+
+const doc = {
+  info: {
+    title: 'Locations API',
+    description: 'Lorem'
+  },
+  host: (process.env.SERVER_URL || 'localhost') + ':' + (process.env.SERVER_PORT || '3000')
+}
+
+const outputFile = './swagger.json';
+const endpointsFiles = ['./server.ts'];
+
+const options = {
+  disableLogs: false,
+  autoHeaders: true,
+  autoQuery: true,
+  autoBody: true
+};
+
+swaggerAutogen(options)(outputFile, endpointsFiles, doc);
