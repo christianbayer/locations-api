@@ -48,6 +48,8 @@ export class CitiesController {
       return res.status(404).json({ error: 'State not found.' });
     }
 
+    console.log(state);
+
     if (! state.cities) {
       state.cities = [];
     }
