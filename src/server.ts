@@ -24,4 +24,4 @@ server.use(
 
 server.use(routes);
 
-server.listen(process.env.SERVER_PORT || 3000);
+server.listen(process.env.EXPRESS_PORT || 3000);
