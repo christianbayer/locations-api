@@ -32,11 +32,10 @@ export class StatesController {
       country.states = [];
     }
 
-    let states: State[] = country.states.map(state => {
-      delete state.cities;
-
-      return state;
-    });
+    let states: State[] = country.states.map(state => ({
+      name: state.name,
+      code: state.code
+    }));
 
     /*
       #swagger.responses[200] = {
