@@ -35,7 +35,7 @@ export class StatesController {
     let states: State[] = country.states.map(state => ({
       name: state.name,
       code: state.code
-    }));
+    })).sort((a, b) => a.name.localeCompare(b.name));
 
     /*
       #swagger.responses[200] = {

@@ -15,7 +15,7 @@ export class CountriesController {
         unicode: country.unicode,
         latitude: country.latitude,
         longitude: country.longitude
-    }));
+    })).sort((a, b) => a.name.localeCompare(b.name));
 
     /*
       #swagger.responses[200] = {

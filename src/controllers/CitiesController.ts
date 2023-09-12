@@ -52,6 +52,8 @@ export class CitiesController {
       state.cities = [];
     }
 
+    state.cities.sort((a, b) => a.name.localeCompare(b.name));
+
     /*
       #swagger.responses[200] = {
         description: 'List of cities',
