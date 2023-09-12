@@ -6,7 +6,7 @@ import routes from './routes';
 const port = process.env.EXPRESS_PORT || 3000;
 const server = express();
 
-server.use(cors({ origin: '*' }));
+server.use(cors());
 
 server.disable('x-powered-by');
 
